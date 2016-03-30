@@ -26,5 +26,6 @@ namespace ComicBookApp
         {
             this.InitializeComponent();
         }
+
     }
 }
