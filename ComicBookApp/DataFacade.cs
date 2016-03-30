@@ -46,6 +46,31 @@ namespace ComicBookApp
             }
         }
 
+        public static async Task PopulateMarvelComicsAsync(ObservableCollection<ComicComic> marvelComics)
+        {
+            var comicDataWrapper = await GetComicDataWrapper();
+
+            var comics = comicDataWrapper.data.results;
+
+            foreach (var comic in comics)
+            {
+                //filter characters with no image
+                if (comic.thumbnail != null
+                    && comic.thumbnail.path != ""
+                    && comic.thumbnail.path != ImageNotAvailablePath)
+                {
+                    comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                        comic.thumbnail.path,
+                        comic.thumbnail.extension);
+
+                    comic.thumbnail.large = String.Format("{0}/standard_xlarge.{1}",
+                        comic.thumbnail.path,
+                        comic.thumbnail.extension);
+                }
+                marvelComics.Add(comic);
+            }
+        }
+
 
         private async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
         {
@@ -67,6 +92,31 @@ namespace ComicBookApp
 
             var result = (CharacterDataWrapper)serializer.ReadObject(ms);
 
+            return result;
+        }
+
+        public static async Task<ComicDataWrapper> GetComicDataWrapper()
+        {
+            // Assemble the URL
+            Random random = new Random();
+            var offset = random.Next(MaxCharacters);
+
+            // Get the MD5 Hash
+            var timeStamp = DateTime.Now.Ticks.ToString();
+            var hash = MakeAHash(timeStamp);
+
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/comics?limit=20&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+
+            // Call out to Marvel
+            HttpClient http = new HttpClient();
+            var response = await http.GetAsync(url);
+            var jsonMessage = await response.Content.ReadAsStringAsync();
+
+            // Response -> string / json -> deserialize
+            var serializer = new DataContractJsonSerializer(typeof(ComicDataWrapper));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
+
+            var result = (ComicDataWrapper)serializer.ReadObject(ms);
             return result;
         }
 
