@@ -22,15 +22,15 @@ namespace ComicBookApp
 
     public sealed partial class MainPage : Page
     {
-        public ObservableCollection<Character> MarvelCharacters { get; set; }
+
+       // public ObservableCollection<Character> MarvelCharacters { get; set; }
 
         public MainPage()
         {
             this.InitializeComponent();
-
-            MarvelCharacters = new ObservableCollection<Character>();
+           // MarvelCharacters = new ObservableCollection<Character>();
         }
-
+        
         private void HamBurgerButton_Click(object sender, RoutedEventArgs e)
         {
             SlpitView.IsPaneOpen = !SlpitView.IsPaneOpen;
@@ -38,8 +38,21 @@ namespace ComicBookApp
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+           if (Character.IsSelected)
+            {
+              //BackButton.Visibility = Visibility.Collapsed;
+              MyFrame.Navigate(typeof(CharacterView));
+              TitleTextBlock.Text = "Character";
+            }
+            else if (Comics.IsSelected)
+            {
+              //BackButton.Visibility = Visibility.Visible;
+              MyFrame.Navigate(typeof(ComicView));
+              TitleTextBlock.Text = "Comics";
+            }
         }
+        
+
     }
 
 }

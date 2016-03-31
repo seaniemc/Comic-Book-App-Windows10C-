@@ -194,3 +194,13 @@ C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\qualifie
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\x86\Debug\CharacterView.xbf
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CharacterView.g.i.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CharacterView.g.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CharacterView.xaml
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CharacterView.xbf
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\x86\Debug\ComicView.xbf
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.g.i.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.g.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.xaml
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.xbf

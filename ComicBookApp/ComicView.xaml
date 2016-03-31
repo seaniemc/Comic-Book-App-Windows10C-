@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ComicBookApp.CharacterView"
+    x:Class="ComicBookApp.ComicView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ComicBookApp"
@@ -20,16 +20,16 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ListView Name="MasterListView" ItemsSource="{x:Bind MarvelCharacters}">
+        <ListView Name="MasterListView" ItemsSource="{x:Bind MarvelComics}">
             <ListView.ItemTemplate>
-                <DataTemplate x:DataType="data:Character">
+                <DataTemplate x:DataType="data:ComicComic">
                     <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
-                        <Ellipse Width="45" Height="45">
-                            <Ellipse.Fill>
+                        <Rectangle Width="45" Height="45">
+                            <Rectangle.Fill>
                                 <ImageBrush ImageSource="{x:Bind thumbnail.small}" />
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <TextBlock Text="{x:Bind name}"
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBlock Text="{x:Bind title}"
                                    VerticalAlignment="Center"
                                    Margin="10,0,0,0"
                                    FontSize="18" />
@@ -58,4 +58,5 @@
                       HorizontalAlignment="Center" />
 
     </Grid>
+   
 </Page>

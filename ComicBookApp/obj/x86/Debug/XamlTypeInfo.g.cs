@@ -132,8 +132,8 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[16];
-            _typeNameTable[0] = "ComicBookApp.MainPage";
+            _typeNameTable = new string[37];
+            _typeNameTable[0] = "ComicBookApp.CharacterView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.Character>";
@@ -149,9 +149,30 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             _typeNameTable[13] = "ComicBookApp.Models.Events";
             _typeNameTable[14] = "System.Collections.Generic.List`1<ComicBookApp.Models.Url>";
             _typeNameTable[15] = "ComicBookApp.Models.Url";
+            _typeNameTable[16] = "ComicBookApp.ComicView";
+            _typeNameTable[17] = "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.ComicComic>";
+            _typeNameTable[18] = "System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.ComicComic>";
+            _typeNameTable[19] = "ComicBookApp.Models.ComicComic";
+            _typeNameTable[20] = "System.Collections.Generic.List`1<ComicBookApp.Models.TextObject>";
+            _typeNameTable[21] = "ComicBookApp.Models.TextObject";
+            _typeNameTable[22] = "ComicBookApp.Models.Series";
+            _typeNameTable[23] = "System.Collections.Generic.List`1<Object>";
+            _typeNameTable[24] = "System.Collections.Generic.List`1<ComicBookApp.Models.Date>";
+            _typeNameTable[25] = "ComicBookApp.Models.Date";
+            _typeNameTable[26] = "System.Collections.Generic.List`1<ComicBookApp.Models.Price>";
+            _typeNameTable[27] = "ComicBookApp.Models.Price";
+            _typeNameTable[28] = "Double";
+            _typeNameTable[29] = "ComicBookApp.Models.ComicThumbnail";
+            _typeNameTable[30] = "System.Collections.Generic.List`1<ComicBookApp.Models.Image>";
+            _typeNameTable[31] = "ComicBookApp.Models.Image";
+            _typeNameTable[32] = "ComicBookApp.Models.Creators";
+            _typeNameTable[33] = "ComicBookApp.Models.Characters";
+            _typeNameTable[34] = "ComicBookApp.Models.ComicStories";
+            _typeNameTable[35] = "ComicBookApp.Models.ComicEvents";
+            _typeNameTable[36] = "ComicBookApp.MainPage";
 
-            _typeTable = new global::System.Type[16];
-            _typeTable[0] = typeof(global::ComicBookApp.MainPage);
+            _typeTable = new global::System.Type[37];
+            _typeTable[0] = typeof(global::ComicBookApp.CharacterView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.Character>);
@@ -167,6 +188,27 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             _typeTable[13] = typeof(global::ComicBookApp.Models.Events);
             _typeTable[14] = typeof(global::System.Collections.Generic.List<global::ComicBookApp.Models.Url>);
             _typeTable[15] = typeof(global::ComicBookApp.Models.Url);
+            _typeTable[16] = typeof(global::ComicBookApp.ComicView);
+            _typeTable[17] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.ComicComic>);
+            _typeTable[18] = typeof(global::System.Collections.ObjectModel.Collection<global::ComicBookApp.Models.ComicComic>);
+            _typeTable[19] = typeof(global::ComicBookApp.Models.ComicComic);
+            _typeTable[20] = typeof(global::System.Collections.Generic.List<global::ComicBookApp.Models.TextObject>);
+            _typeTable[21] = typeof(global::ComicBookApp.Models.TextObject);
+            _typeTable[22] = typeof(global::ComicBookApp.Models.Series);
+            _typeTable[23] = typeof(global::System.Collections.Generic.List<global::System.Object>);
+            _typeTable[24] = typeof(global::System.Collections.Generic.List<global::ComicBookApp.Models.Date>);
+            _typeTable[25] = typeof(global::ComicBookApp.Models.Date);
+            _typeTable[26] = typeof(global::System.Collections.Generic.List<global::ComicBookApp.Models.Price>);
+            _typeTable[27] = typeof(global::ComicBookApp.Models.Price);
+            _typeTable[28] = typeof(global::System.Double);
+            _typeTable[29] = typeof(global::ComicBookApp.Models.ComicThumbnail);
+            _typeTable[30] = typeof(global::System.Collections.Generic.List<global::ComicBookApp.Models.Image>);
+            _typeTable[31] = typeof(global::ComicBookApp.Models.Image);
+            _typeTable[32] = typeof(global::ComicBookApp.Models.Creators);
+            _typeTable[33] = typeof(global::ComicBookApp.Models.Characters);
+            _typeTable[34] = typeof(global::ComicBookApp.Models.ComicStories);
+            _typeTable[35] = typeof(global::ComicBookApp.Models.ComicEvents);
+            _typeTable[36] = typeof(global::ComicBookApp.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -201,7 +243,7 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::ComicBookApp.MainPage(); }
+        private object Activate_0_CharacterView() { return new global::ComicBookApp.CharacterView(); }
         private object Activate_3_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.Character>(); }
         private object Activate_4_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ComicBookApp.Models.Character>(); }
         private object Activate_6_Character() { return new global::ComicBookApp.Models.Character(); }
@@ -212,6 +254,26 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
         private object Activate_13_Events() { return new global::ComicBookApp.Models.Events(); }
         private object Activate_14_List() { return new global::System.Collections.Generic.List<global::ComicBookApp.Models.Url>(); }
         private object Activate_15_Url() { return new global::ComicBookApp.Models.Url(); }
+        private object Activate_16_ComicView() { return new global::ComicBookApp.ComicView(); }
+        private object Activate_17_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.ComicComic>(); }
+        private object Activate_18_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ComicBookApp.Models.ComicComic>(); }
+        private object Activate_19_ComicComic() { return new global::ComicBookApp.Models.ComicComic(); }
+        private object Activate_20_List() { return new global::System.Collections.Generic.List<global::ComicBookApp.Models.TextObject>(); }
+        private object Activate_21_TextObject() { return new global::ComicBookApp.Models.TextObject(); }
+        private object Activate_22_Series() { return new global::ComicBookApp.Models.Series(); }
+        private object Activate_23_List() { return new global::System.Collections.Generic.List<global::System.Object>(); }
+        private object Activate_24_List() { return new global::System.Collections.Generic.List<global::ComicBookApp.Models.Date>(); }
+        private object Activate_25_Date() { return new global::ComicBookApp.Models.Date(); }
+        private object Activate_26_List() { return new global::System.Collections.Generic.List<global::ComicBookApp.Models.Price>(); }
+        private object Activate_27_Price() { return new global::ComicBookApp.Models.Price(); }
+        private object Activate_29_ComicThumbnail() { return new global::ComicBookApp.Models.ComicThumbnail(); }
+        private object Activate_30_List() { return new global::System.Collections.Generic.List<global::ComicBookApp.Models.Image>(); }
+        private object Activate_31_Image() { return new global::ComicBookApp.Models.Image(); }
+        private object Activate_32_Creators() { return new global::ComicBookApp.Models.Creators(); }
+        private object Activate_33_Characters() { return new global::ComicBookApp.Models.Characters(); }
+        private object Activate_34_ComicStories() { return new global::ComicBookApp.Models.ComicStories(); }
+        private object Activate_35_ComicEvents() { return new global::ComicBookApp.Models.ComicEvents(); }
+        private object Activate_36_MainPage() { return new global::ComicBookApp.MainPage(); }
         private void VectorAdd_3_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Character>)instance;
@@ -230,6 +292,48 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             var newItem = (global::ComicBookApp.Models.Url)item;
             collection.Add(newItem);
         }
+        private void VectorAdd_17_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.ComicComic>)instance;
+            var newItem = (global::ComicBookApp.Models.ComicComic)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_18_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.ComicComic>)instance;
+            var newItem = (global::ComicBookApp.Models.ComicComic)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_20_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.TextObject>)instance;
+            var newItem = (global::ComicBookApp.Models.TextObject)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_23_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
+            var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_24_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Date>)instance;
+            var newItem = (global::ComicBookApp.Models.Date)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_26_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Price>)instance;
+            var newItem = (global::ComicBookApp.Models.Price)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_30_List(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Image>)instance;
+            var newItem = (global::ComicBookApp.Models.Image)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -241,9 +345,9 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ComicBookApp.MainPage
+            case 0:   //  ComicBookApp.CharacterView
                 userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_CharacterView;
                 userType.AddMemberName("MarvelCharacters");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -351,19 +455,202 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
+
+            case 16:   //  ComicBookApp.ComicView
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_16_ComicView;
+                userType.AddMemberName("MarvelComics");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.ComicComic>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.ComicComic>"));
+                userType.CollectionAdd = VectorAdd_17_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 18:   //  System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.ComicComic>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_18_Collection;
+                userType.CollectionAdd = VectorAdd_18_Collection;
+                xamlType = userType;
+                break;
+
+            case 19:   //  ComicBookApp.Models.ComicComic
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_19_ComicComic;
+                userType.AddMemberName("id");
+                userType.AddMemberName("digitalId");
+                userType.AddMemberName("title");
+                userType.AddMemberName("issueNumber");
+                userType.AddMemberName("variantDescription");
+                userType.AddMemberName("description");
+                userType.AddMemberName("modified");
+                userType.AddMemberName("isbn");
+                userType.AddMemberName("upc");
+                userType.AddMemberName("diamondCode");
+                userType.AddMemberName("ean");
+                userType.AddMemberName("issn");
+                userType.AddMemberName("format");
+                userType.AddMemberName("pageCount");
+                userType.AddMemberName("textObjects");
+                userType.AddMemberName("resourceURI");
+                userType.AddMemberName("urls");
+                userType.AddMemberName("series");
+                userType.AddMemberName("variants");
+                userType.AddMemberName("collections");
+                userType.AddMemberName("collectedIssues");
+                userType.AddMemberName("dates");
+                userType.AddMemberName("prices");
+                userType.AddMemberName("thumbnail");
+                userType.AddMemberName("images");
+                userType.AddMemberName("creators");
+                userType.AddMemberName("characters");
+                userType.AddMemberName("stories");
+                userType.AddMemberName("events");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 20:   //  System.Collections.Generic.List`1<ComicBookApp.Models.TextObject>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_20_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 21:   //  ComicBookApp.Models.TextObject
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_21_TextObject;
+                userType.AddMemberName("type");
+                userType.AddMemberName("language");
+                userType.AddMemberName("text");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 22:   //  ComicBookApp.Models.Series
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 23:   //  System.Collections.Generic.List`1<Object>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_23_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 24:   //  System.Collections.Generic.List`1<ComicBookApp.Models.Date>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_24_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 25:   //  ComicBookApp.Models.Date
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_25_Date;
+                userType.AddMemberName("type");
+                userType.AddMemberName("date");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 26:   //  System.Collections.Generic.List`1<ComicBookApp.Models.Price>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_26_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 27:   //  ComicBookApp.Models.Price
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_27_Price;
+                userType.AddMemberName("type");
+                userType.AddMemberName("price");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 28:   //  Double
+                xamlType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 29:   //  ComicBookApp.Models.ComicThumbnail
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 30:   //  System.Collections.Generic.List`1<ComicBookApp.Models.Image>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_30_List;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 31:   //  ComicBookApp.Models.Image
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_31_Image;
+                userType.AddMemberName("path");
+                userType.AddMemberName("extension");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 32:   //  ComicBookApp.Models.Creators
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 33:   //  ComicBookApp.Models.Characters
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 34:   //  ComicBookApp.Models.ComicStories
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  ComicBookApp.Models.ComicEvents
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  ComicBookApp.MainPage
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_36_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
 
 
-        private object get_0_MainPage_MarvelCharacters(object instance)
+        private object get_0_CharacterView_MarvelCharacters(object instance)
         {
-            var that = (global::ComicBookApp.MainPage)instance;
+            var that = (global::ComicBookApp.CharacterView)instance;
             return that.MarvelCharacters;
         }
-        private void set_0_MainPage_MarvelCharacters(object instance, object Value)
+        private void set_0_CharacterView_MarvelCharacters(object instance, object Value)
         {
-            var that = (global::ComicBookApp.MainPage)instance;
+            var that = (global::ComicBookApp.CharacterView)instance;
             that.MarvelCharacters = (global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.Character>)Value;
         }
         private object get_1_Character_id(object instance)
@@ -496,6 +783,396 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             var that = (global::ComicBookApp.Models.Url)instance;
             that.url = (global::System.String)Value;
         }
+        private object get_14_ComicView_MarvelComics(object instance)
+        {
+            var that = (global::ComicBookApp.ComicView)instance;
+            return that.MarvelComics;
+        }
+        private void set_14_ComicView_MarvelComics(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.ComicView)instance;
+            that.MarvelComics = (global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.ComicComic>)Value;
+        }
+        private object get_15_ComicComic_id(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.id;
+        }
+        private void set_15_ComicComic_id(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_16_ComicComic_digitalId(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.digitalId;
+        }
+        private void set_16_ComicComic_digitalId(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.digitalId = (global::System.Int32)Value;
+        }
+        private object get_17_ComicComic_title(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.title;
+        }
+        private void set_17_ComicComic_title(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.title = (global::System.String)Value;
+        }
+        private object get_18_ComicComic_issueNumber(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.issueNumber;
+        }
+        private void set_18_ComicComic_issueNumber(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.issueNumber = (global::System.Int32)Value;
+        }
+        private object get_19_ComicComic_variantDescription(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.variantDescription;
+        }
+        private void set_19_ComicComic_variantDescription(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.variantDescription = (global::System.String)Value;
+        }
+        private object get_20_ComicComic_description(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.description;
+        }
+        private void set_20_ComicComic_description(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.description = (global::System.String)Value;
+        }
+        private object get_21_ComicComic_modified(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.modified;
+        }
+        private void set_21_ComicComic_modified(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.modified = (global::System.String)Value;
+        }
+        private object get_22_ComicComic_isbn(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.isbn;
+        }
+        private void set_22_ComicComic_isbn(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.isbn = (global::System.String)Value;
+        }
+        private object get_23_ComicComic_upc(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.upc;
+        }
+        private void set_23_ComicComic_upc(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.upc = (global::System.String)Value;
+        }
+        private object get_24_ComicComic_diamondCode(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.diamondCode;
+        }
+        private void set_24_ComicComic_diamondCode(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.diamondCode = (global::System.String)Value;
+        }
+        private object get_25_ComicComic_ean(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.ean;
+        }
+        private void set_25_ComicComic_ean(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.ean = (global::System.String)Value;
+        }
+        private object get_26_ComicComic_issn(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.issn;
+        }
+        private void set_26_ComicComic_issn(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.issn = (global::System.String)Value;
+        }
+        private object get_27_ComicComic_format(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.format;
+        }
+        private void set_27_ComicComic_format(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.format = (global::System.String)Value;
+        }
+        private object get_28_ComicComic_pageCount(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.pageCount;
+        }
+        private void set_28_ComicComic_pageCount(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.pageCount = (global::System.Int32)Value;
+        }
+        private object get_29_ComicComic_textObjects(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.textObjects;
+        }
+        private void set_29_ComicComic_textObjects(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.textObjects = (global::System.Collections.Generic.List<global::ComicBookApp.Models.TextObject>)Value;
+        }
+        private object get_30_TextObject_type(object instance)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            return that.type;
+        }
+        private void set_30_TextObject_type(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_31_TextObject_language(object instance)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            return that.language;
+        }
+        private void set_31_TextObject_language(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            that.language = (global::System.String)Value;
+        }
+        private object get_32_TextObject_text(object instance)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            return that.text;
+        }
+        private void set_32_TextObject_text(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.TextObject)instance;
+            that.text = (global::System.String)Value;
+        }
+        private object get_33_ComicComic_resourceURI(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.resourceURI;
+        }
+        private void set_33_ComicComic_resourceURI(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.resourceURI = (global::System.String)Value;
+        }
+        private object get_34_ComicComic_urls(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.urls;
+        }
+        private void set_34_ComicComic_urls(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.urls = (global::System.Collections.Generic.List<global::ComicBookApp.Models.Url>)Value;
+        }
+        private object get_35_ComicComic_series(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.series;
+        }
+        private void set_35_ComicComic_series(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.series = (global::ComicBookApp.Models.Series)Value;
+        }
+        private object get_36_ComicComic_variants(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.variants;
+        }
+        private void set_36_ComicComic_variants(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.variants = (global::System.Collections.Generic.List<global::System.Object>)Value;
+        }
+        private object get_37_ComicComic_collections(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.collections;
+        }
+        private void set_37_ComicComic_collections(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.collections = (global::System.Collections.Generic.List<global::System.Object>)Value;
+        }
+        private object get_38_ComicComic_collectedIssues(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.collectedIssues;
+        }
+        private void set_38_ComicComic_collectedIssues(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.collectedIssues = (global::System.Collections.Generic.List<global::System.Object>)Value;
+        }
+        private object get_39_ComicComic_dates(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.dates;
+        }
+        private void set_39_ComicComic_dates(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.dates = (global::System.Collections.Generic.List<global::ComicBookApp.Models.Date>)Value;
+        }
+        private object get_40_Date_type(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Date)instance;
+            return that.type;
+        }
+        private void set_40_Date_type(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Date)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_41_Date_date(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Date)instance;
+            return that.date;
+        }
+        private void set_41_Date_date(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Date)instance;
+            that.date = (global::System.String)Value;
+        }
+        private object get_42_ComicComic_prices(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.prices;
+        }
+        private void set_42_ComicComic_prices(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.prices = (global::System.Collections.Generic.List<global::ComicBookApp.Models.Price>)Value;
+        }
+        private object get_43_Price_type(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Price)instance;
+            return that.type;
+        }
+        private void set_43_Price_type(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Price)instance;
+            that.type = (global::System.String)Value;
+        }
+        private object get_44_Price_price(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Price)instance;
+            return that.price;
+        }
+        private void set_44_Price_price(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Price)instance;
+            that.price = (global::System.Double)Value;
+        }
+        private object get_45_ComicComic_thumbnail(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.thumbnail;
+        }
+        private void set_45_ComicComic_thumbnail(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.thumbnail = (global::ComicBookApp.Models.ComicThumbnail)Value;
+        }
+        private object get_46_ComicComic_images(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.images;
+        }
+        private void set_46_ComicComic_images(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.images = (global::System.Collections.Generic.List<global::ComicBookApp.Models.Image>)Value;
+        }
+        private object get_47_Image_path(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Image)instance;
+            return that.path;
+        }
+        private void set_47_Image_path(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Image)instance;
+            that.path = (global::System.String)Value;
+        }
+        private object get_48_Image_extension(object instance)
+        {
+            var that = (global::ComicBookApp.Models.Image)instance;
+            return that.extension;
+        }
+        private void set_48_Image_extension(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.Image)instance;
+            that.extension = (global::System.String)Value;
+        }
+        private object get_49_ComicComic_creators(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.creators;
+        }
+        private void set_49_ComicComic_creators(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.creators = (global::ComicBookApp.Models.Creators)Value;
+        }
+        private object get_50_ComicComic_characters(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.characters;
+        }
+        private void set_50_ComicComic_characters(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.characters = (global::ComicBookApp.Models.Characters)Value;
+        }
+        private object get_51_ComicComic_stories(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.stories;
+        }
+        private void set_51_ComicComic_stories(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.stories = (global::ComicBookApp.Models.ComicStories)Value;
+        }
+        private object get_52_ComicComic_events(object instance)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            return that.events;
+        }
+        private void set_52_ComicComic_events(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.ComicComic)instance;
+            that.events = (global::ComicBookApp.Models.ComicEvents)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -504,11 +1181,11 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "ComicBookApp.MainPage.MarvelCharacters":
-                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.MainPage");
+            case "ComicBookApp.CharacterView.MarvelCharacters":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.CharacterView");
                 xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "MarvelCharacters", "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.Character>");
-                xamlMember.Getter = get_0_MainPage_MarvelCharacters;
-                xamlMember.Setter = set_0_MainPage_MarvelCharacters;
+                xamlMember.Getter = get_0_CharacterView_MarvelCharacters;
+                xamlMember.Setter = set_0_CharacterView_MarvelCharacters;
                 break;
             case "ComicBookApp.Models.Character.id":
                 userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Character");
@@ -587,6 +1264,240 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
                 xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "url", "String");
                 xamlMember.Getter = get_13_Url_url;
                 xamlMember.Setter = set_13_Url_url;
+                break;
+            case "ComicBookApp.ComicView.MarvelComics":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.ComicView");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "MarvelComics", "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.ComicComic>");
+                xamlMember.Getter = get_14_ComicView_MarvelComics;
+                xamlMember.Setter = set_14_ComicView_MarvelComics;
+                break;
+            case "ComicBookApp.Models.ComicComic.id":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_15_ComicComic_id;
+                xamlMember.Setter = set_15_ComicComic_id;
+                break;
+            case "ComicBookApp.Models.ComicComic.digitalId":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "digitalId", "Int32");
+                xamlMember.Getter = get_16_ComicComic_digitalId;
+                xamlMember.Setter = set_16_ComicComic_digitalId;
+                break;
+            case "ComicBookApp.Models.ComicComic.title":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "title", "String");
+                xamlMember.Getter = get_17_ComicComic_title;
+                xamlMember.Setter = set_17_ComicComic_title;
+                break;
+            case "ComicBookApp.Models.ComicComic.issueNumber":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "issueNumber", "Int32");
+                xamlMember.Getter = get_18_ComicComic_issueNumber;
+                xamlMember.Setter = set_18_ComicComic_issueNumber;
+                break;
+            case "ComicBookApp.Models.ComicComic.variantDescription":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "variantDescription", "String");
+                xamlMember.Getter = get_19_ComicComic_variantDescription;
+                xamlMember.Setter = set_19_ComicComic_variantDescription;
+                break;
+            case "ComicBookApp.Models.ComicComic.description":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "description", "String");
+                xamlMember.Getter = get_20_ComicComic_description;
+                xamlMember.Setter = set_20_ComicComic_description;
+                break;
+            case "ComicBookApp.Models.ComicComic.modified":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "modified", "String");
+                xamlMember.Getter = get_21_ComicComic_modified;
+                xamlMember.Setter = set_21_ComicComic_modified;
+                break;
+            case "ComicBookApp.Models.ComicComic.isbn":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "isbn", "String");
+                xamlMember.Getter = get_22_ComicComic_isbn;
+                xamlMember.Setter = set_22_ComicComic_isbn;
+                break;
+            case "ComicBookApp.Models.ComicComic.upc":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "upc", "String");
+                xamlMember.Getter = get_23_ComicComic_upc;
+                xamlMember.Setter = set_23_ComicComic_upc;
+                break;
+            case "ComicBookApp.Models.ComicComic.diamondCode":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "diamondCode", "String");
+                xamlMember.Getter = get_24_ComicComic_diamondCode;
+                xamlMember.Setter = set_24_ComicComic_diamondCode;
+                break;
+            case "ComicBookApp.Models.ComicComic.ean":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "ean", "String");
+                xamlMember.Getter = get_25_ComicComic_ean;
+                xamlMember.Setter = set_25_ComicComic_ean;
+                break;
+            case "ComicBookApp.Models.ComicComic.issn":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "issn", "String");
+                xamlMember.Getter = get_26_ComicComic_issn;
+                xamlMember.Setter = set_26_ComicComic_issn;
+                break;
+            case "ComicBookApp.Models.ComicComic.format":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "format", "String");
+                xamlMember.Getter = get_27_ComicComic_format;
+                xamlMember.Setter = set_27_ComicComic_format;
+                break;
+            case "ComicBookApp.Models.ComicComic.pageCount":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "pageCount", "Int32");
+                xamlMember.Getter = get_28_ComicComic_pageCount;
+                xamlMember.Setter = set_28_ComicComic_pageCount;
+                break;
+            case "ComicBookApp.Models.ComicComic.textObjects":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "textObjects", "System.Collections.Generic.List`1<ComicBookApp.Models.TextObject>");
+                xamlMember.Getter = get_29_ComicComic_textObjects;
+                xamlMember.Setter = set_29_ComicComic_textObjects;
+                break;
+            case "ComicBookApp.Models.TextObject.type":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.TextObject");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_30_TextObject_type;
+                xamlMember.Setter = set_30_TextObject_type;
+                break;
+            case "ComicBookApp.Models.TextObject.language":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.TextObject");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "language", "String");
+                xamlMember.Getter = get_31_TextObject_language;
+                xamlMember.Setter = set_31_TextObject_language;
+                break;
+            case "ComicBookApp.Models.TextObject.text":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.TextObject");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "text", "String");
+                xamlMember.Getter = get_32_TextObject_text;
+                xamlMember.Setter = set_32_TextObject_text;
+                break;
+            case "ComicBookApp.Models.ComicComic.resourceURI":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
+                xamlMember.Getter = get_33_ComicComic_resourceURI;
+                xamlMember.Setter = set_33_ComicComic_resourceURI;
+                break;
+            case "ComicBookApp.Models.ComicComic.urls":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "urls", "System.Collections.Generic.List`1<ComicBookApp.Models.Url>");
+                xamlMember.Getter = get_34_ComicComic_urls;
+                xamlMember.Setter = set_34_ComicComic_urls;
+                break;
+            case "ComicBookApp.Models.ComicComic.series":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "series", "ComicBookApp.Models.Series");
+                xamlMember.Getter = get_35_ComicComic_series;
+                xamlMember.Setter = set_35_ComicComic_series;
+                break;
+            case "ComicBookApp.Models.ComicComic.variants":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "variants", "System.Collections.Generic.List`1<Object>");
+                xamlMember.Getter = get_36_ComicComic_variants;
+                xamlMember.Setter = set_36_ComicComic_variants;
+                break;
+            case "ComicBookApp.Models.ComicComic.collections":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "collections", "System.Collections.Generic.List`1<Object>");
+                xamlMember.Getter = get_37_ComicComic_collections;
+                xamlMember.Setter = set_37_ComicComic_collections;
+                break;
+            case "ComicBookApp.Models.ComicComic.collectedIssues":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "collectedIssues", "System.Collections.Generic.List`1<Object>");
+                xamlMember.Getter = get_38_ComicComic_collectedIssues;
+                xamlMember.Setter = set_38_ComicComic_collectedIssues;
+                break;
+            case "ComicBookApp.Models.ComicComic.dates":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "dates", "System.Collections.Generic.List`1<ComicBookApp.Models.Date>");
+                xamlMember.Getter = get_39_ComicComic_dates;
+                xamlMember.Setter = set_39_ComicComic_dates;
+                break;
+            case "ComicBookApp.Models.Date.type":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Date");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_40_Date_type;
+                xamlMember.Setter = set_40_Date_type;
+                break;
+            case "ComicBookApp.Models.Date.date":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Date");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "date", "String");
+                xamlMember.Getter = get_41_Date_date;
+                xamlMember.Setter = set_41_Date_date;
+                break;
+            case "ComicBookApp.Models.ComicComic.prices":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "prices", "System.Collections.Generic.List`1<ComicBookApp.Models.Price>");
+                xamlMember.Getter = get_42_ComicComic_prices;
+                xamlMember.Setter = set_42_ComicComic_prices;
+                break;
+            case "ComicBookApp.Models.Price.type":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Price");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "type", "String");
+                xamlMember.Getter = get_43_Price_type;
+                xamlMember.Setter = set_43_Price_type;
+                break;
+            case "ComicBookApp.Models.Price.price":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Price");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "price", "Double");
+                xamlMember.Getter = get_44_Price_price;
+                xamlMember.Setter = set_44_Price_price;
+                break;
+            case "ComicBookApp.Models.ComicComic.thumbnail":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "thumbnail", "ComicBookApp.Models.ComicThumbnail");
+                xamlMember.Getter = get_45_ComicComic_thumbnail;
+                xamlMember.Setter = set_45_ComicComic_thumbnail;
+                break;
+            case "ComicBookApp.Models.ComicComic.images":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "images", "System.Collections.Generic.List`1<ComicBookApp.Models.Image>");
+                xamlMember.Getter = get_46_ComicComic_images;
+                xamlMember.Setter = set_46_ComicComic_images;
+                break;
+            case "ComicBookApp.Models.Image.path":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Image");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "path", "String");
+                xamlMember.Getter = get_47_Image_path;
+                xamlMember.Setter = set_47_Image_path;
+                break;
+            case "ComicBookApp.Models.Image.extension":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.Image");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "extension", "String");
+                xamlMember.Getter = get_48_Image_extension;
+                xamlMember.Setter = set_48_Image_extension;
+                break;
+            case "ComicBookApp.Models.ComicComic.creators":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "creators", "ComicBookApp.Models.Creators");
+                xamlMember.Getter = get_49_ComicComic_creators;
+                xamlMember.Setter = set_49_ComicComic_creators;
+                break;
+            case "ComicBookApp.Models.ComicComic.characters":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "characters", "ComicBookApp.Models.Characters");
+                xamlMember.Getter = get_50_ComicComic_characters;
+                xamlMember.Setter = set_50_ComicComic_characters;
+                break;
+            case "ComicBookApp.Models.ComicComic.stories":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "stories", "ComicBookApp.Models.ComicStories");
+                xamlMember.Getter = get_51_ComicComic_stories;
+                xamlMember.Setter = set_51_ComicComic_stories;
+                break;
+            case "ComicBookApp.Models.ComicComic.events":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.ComicComic");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "events", "ComicBookApp.Models.ComicEvents");
+                xamlMember.Getter = get_52_ComicComic_events;
+                xamlMember.Setter = set_52_ComicComic_events;
                 break;
             }
             return xamlMember;

@@ -22,14 +22,14 @@ namespace ComicBookApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CharacterView : Page
+    public sealed partial class ComicView : Page
     {
-        public ObservableCollection<Character> MarvelCharacters { get; set; }
+        public ObservableCollection<ComicComic> MarvelComics { get; set; }
 
-        public CharacterView()
+        public ComicView()
         {
             this.InitializeComponent();
-            MarvelCharacters = new ObservableCollection<Character>();
+            MarvelComics = new ObservableCollection<ComicComic>();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -37,7 +37,7 @@ namespace ComicBookApp
             MyProgressRing.IsEnabled = true;
             MyProgressRing.Visibility = Visibility.Visible;
 
-            await DataFacade.PopulateMarvelCharactersAsync(MarvelCharacters);
+            await DataFacade.PopulateMarvelComicsAsync(MarvelComics);
 
             MyProgressRing.IsEnabled = false;
             MyProgressRing.Visibility = Visibility.Collapsed;

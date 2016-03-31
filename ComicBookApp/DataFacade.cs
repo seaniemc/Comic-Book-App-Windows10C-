@@ -38,11 +38,13 @@ namespace ComicBookApp
                         character.thumbnail.path,
                         character.thumbnail.extension);
 
-                    character.thumbnail.large = String.Format("{0}/standard_xlarge.{1}",
+                    character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                         character.thumbnail.path,
                         character.thumbnail.extension);
+
+                    marvelCharacters.Add(character);
                 }
-                marvelCharacters.Add(character);
+                
             }
         }
 
@@ -63,11 +65,12 @@ namespace ComicBookApp
                         comic.thumbnail.path,
                         comic.thumbnail.extension);
 
-                    comic.thumbnail.large = String.Format("{0}/standard_xlarge.{1}",
+                    comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                         comic.thumbnail.path,
                         comic.thumbnail.extension);
+
+                    marvelComics.Add(comic);
                 }
-                marvelComics.Add(comic);
             }
         }
 
@@ -77,10 +80,10 @@ namespace ComicBookApp
             Random random = new Random();
             var offset = random.Next(MaxCharacters);
 
-            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=15&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey);
-
             var timeStamp = DateTime.Now.Ticks.ToString();
             var hash = MakeAHash(timeStamp);
+
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
             //call to API
             HttpClient http = new HttpClient();
