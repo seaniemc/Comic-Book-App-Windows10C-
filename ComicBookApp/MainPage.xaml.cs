@@ -30,6 +30,16 @@ namespace ComicBookApp
 
             MarvelCharacters = new ObservableCollection<Character>();
         }
+
+        private void HamBurgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            SlpitView.IsPaneOpen = !SlpitView.IsPaneOpen;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
 }
