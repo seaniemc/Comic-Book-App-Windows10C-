@@ -5,4 +5,15 @@
     xmlns:local="using:ComicBookApp"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <Style TargetType="RelativePanel" x:Key="MyRelativePanel">
+            <Setter Property="Background" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MyTextBlock1">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+    </Application.Resources>
 </Application>

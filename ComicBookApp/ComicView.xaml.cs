@@ -34,13 +34,13 @@ namespace ComicBookApp
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            MyProgressRing.IsEnabled = true;
-            MyProgressRing.Visibility = Visibility.Visible;
+            MyProgressRing2.IsEnabled = true;
+            MyProgressRing2.Visibility = Visibility.Visible;
 
             await DataFacade.PopulateMarvelComicsAsync(MarvelComics);
 
-            MyProgressRing.IsEnabled = false;
-            MyProgressRing.Visibility = Visibility.Collapsed;
+            MyProgressRing2.IsEnabled = false;
+            MyProgressRing2.Visibility = Visibility.Collapsed;
         }
     }
 }

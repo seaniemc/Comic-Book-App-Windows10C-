@@ -23,7 +23,8 @@ namespace ComicBookApp
     public sealed partial class MainPage : Page
     {
 
-       // public ObservableCollection<Character> MarvelCharacters { get; set; }
+        // public ObservableCollection<Character> MarvelCharacters { get; set; }
+        
 
         public MainPage()
         {
@@ -51,8 +52,24 @@ namespace ComicBookApp
               TitleTextBlock.Text = "Comics";
             }
         }
-        
+        public string GetCharacterId()
+        {
+            string characterId = "";
+            return characterId;
+        }
+        public void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+           var characterID = AutoSegestBox.ToString();
+           characterID = GetCharacterId();
 
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(CharacterView));
+            TitleTextBlock.Text = "Character";
+        }
     }
 
 }

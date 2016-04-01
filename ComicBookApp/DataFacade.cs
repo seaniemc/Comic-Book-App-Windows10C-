@@ -98,6 +98,29 @@ namespace ComicBookApp
             return result;
         }
 
+        private async static Task<CharacterDataWrapper> GetCharacterIdDataWrapper()
+        {
+            Random random = new Random();
+            var offset = random.Next(MaxCharacters);
+
+            //var characterId = MainPage.GetChar
+            var timeStamp = DateTime.Now.Ticks.ToString();
+            var hash = MakeAHash(timeStamp);
+
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+
+            //call to API
+            HttpClient http = new HttpClient();
+            var response = await http.GetAsync(url);
+            var jsonMess = await response.Content.ReadAsStringAsync();
+
+            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
+
+            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
+
+            return result;
+        }
         public static async Task<ComicDataWrapper> GetComicDataWrapper()
         {
             // Assemble the URL

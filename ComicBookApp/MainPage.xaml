@@ -6,7 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:ComicBookApp.Models"
+    Loaded="Page_Loaded"
     mc:Ignorable="d">
+    <Page.Resources>
+        
+    </Page.Resources>
 
     <Grid >
         <Grid.RowDefinitions>
@@ -14,39 +18,45 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <RelativePanel>
+        <RelativePanel Name="MyRelativePanel" Style="{StaticResource MyRelativePanel}">
             <Button Name="HamBurgerButton"
                     RelativePanel.AlignLeftWithPanel="True" FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE700;" Width="45" Height="45"
-                    HorizontalAlignment="Center" Click="HamBurgerButton_Click"/>
-            <TextBlock RelativePanel.RightOf="HamBurgerButton" FontSize="20" 
-                       FontWeight="Bold" Name="TitleTextBlock"
-                       Margin="30,0,0,0"/>
-            <AutoSuggestBox Name="AutoSegestBox" QueryIcon="Find"
-                            PlaceholderText="Search" RelativePanel.AlignRightWithPanel="True"
-                            Width="200" Margin="0,0,0,15"/>
+                    HorizontalAlignment="Center" Click="HamBurgerButton_Click"
+                    Foreground="WhiteSmoke" BorderBrush="IndianRed"/>
+            <TextBlock RelativePanel.RightOf="HamBurgerButton" Name="TitleTextBlock"
+                       Margin="30,0,0,0" Style="{StaticResource MyTextBlock1}"/>
+            <AutoSuggestBox Name="AutoSegestBox" 
+                            PlaceholderText="Enter Character ID" RelativePanel.LeftOf="SearchButton"
+                            Width="200" Margin="0,0,0,15" />
+            <Button Name="SearchButton" 
+                    RelativePanel.AlignRightWithPanel="True"
+                    FontFamily="Segoe MDL2 Assets"
+                    FontSize="20" 
+                    Content="&#xE1A3;" Click="SearchButton_Click"
+              />
         </RelativePanel>
 
         <SplitView Name="SlpitView" Grid.Row="1" DisplayMode="CompactOverlay"
-                   OpenPaneLength="150" CompactPaneLength="45">
-            <SplitView.Pane>
-                <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged">
+                   OpenPaneLength="160" CompactPaneLength="45" >
+            <SplitView.Pane >
+                <ListBox SelectionMode="Single" SelectionChanged="ListBox_SelectionChanged" Background="Black">
                     <ListBoxItem Name="Character">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE77B;"
                                        FontFamily="Segoe MDL2 Assets"
-                                       FontSize="20"/>
+                                       Style="{StaticResource MyTextBlock1}"/>
                             <TextBlock Text="Characters"
-                                       FontSize="18" Margin="20,0,0,0"/>
+                                       Style="{StaticResource MyTextBlock1}" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name="Comics">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE8F1;"
                                        FontFamily="Segoe MDL2 Assets"
-                                       FontSize="20"/>
+                                       Style="{StaticResource MyTextBlock1}"/>
                             <TextBlock Text="Comics"
-                                       FontSize="18" Margin="20,0,0,0"/>
+                                       Style="{StaticResource MyTextBlock1}" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>
