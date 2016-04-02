@@ -9,7 +9,6 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
     <Page.Resources>
-        
     </Page.Resources>
 
     <Grid >
@@ -17,6 +16,29 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="MidiemLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    
 
         <RelativePanel Name="MyRelativePanel" Style="{StaticResource MyRelativePanel}">
             <Button Name="HamBurgerButton"
@@ -32,6 +54,7 @@
             <Button Name="SearchButton" 
                     RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
+                    Foreground="WhiteSmoke"
                     FontSize="20" 
                     Content="&#xE1A3;" Click="SearchButton_Click"
               />

@@ -43,6 +43,7 @@ namespace ComicBookApp.Models
         public string extension { get; set; }
         public string small { get; set; }
         public string large { get; set; }
+        public string extraLarge { get; set; }
     }
 
     public class Image

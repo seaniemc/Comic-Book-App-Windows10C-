@@ -15,5 +15,9 @@
             <Setter Property="Foreground" Value="WhiteSmoke"/>
             <Setter Property="FontWeight" Value="ExtraBold"/>
         </Style>
+        <Style TargetType="Grid" x:Key="MyGrid">
+            <Setter Property="Background" Value="LightCyan"/>
+        </Style>
+         
     </Application.Resources>
 </Application>

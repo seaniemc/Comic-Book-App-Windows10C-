@@ -12,43 +12,64 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ListView x:ConnectionId='2' Name="MasterListView"                                    >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='2' x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='3' x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="900" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        
+                        
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
+        <ListView x:ConnectionId='4' Name="MasterListView"                                    >
             <ListView.ItemTemplate>
                 <DataTemplate                             >
-                    <StackPanel x:ConnectionId='5' Orientation="Horizontal" Margin="10,5,0,5">
-                        <Rectangle Width="45" Height="45">
+                    <StackPanel x:ConnectionId='6' Orientation="Horizontal" Margin="20,0,0,0">
+                        <Rectangle  Width="150" Height="150" >
                             <Rectangle.Fill>
-                                <ImageBrush x:ConnectionId='7'                                        />
+                                <ImageBrush x:ConnectionId='9'                                             />
                             </Rectangle.Fill>
                         </Rectangle>
-                        <TextBlock x:ConnectionId='6'                      
-                                   VerticalAlignment="Center"
-                                   Margin="10,0,0,0"
-                                   FontSize="18" />
-                    </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="10,0,10,0">
+                            <TextBlock x:ConnectionId='7' TextAlignment="Justify"                      
+                                    VerticalAlignment="Center"
+                                    TextWrapping="Wrap"
+                                    Margin="10,0,10,0"
+                                    FontSize="18"/>
+                            <TextBlock x:ConnectionId='8'                               TextWrapping="Wrap" 
+                                            Margin="10,10,10,0" TextAlignment="Justify"/>
+                           
+                        </StackPanel>
+                </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        <Grid x:ConnectionId='3' Name="DetailGrid" Grid.Column="1" Grid.Row="0">
-
-        </Grid>
-
+        
         <TextBlock Text="Data provided by Marvel. © 2015 Marvel" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   Grid.ColumnSpan="2" 
                    Grid.Row="2" />
 
-        <ProgressRing x:ConnectionId='4' Name="MyProgressRing2"
+        <ProgressRing x:ConnectionId='5' Name="MyProgressRing2"
                       Width="100"
                       Height="100"
                       Foreground="Gray"

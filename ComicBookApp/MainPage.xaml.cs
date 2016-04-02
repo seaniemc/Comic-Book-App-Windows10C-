@@ -59,8 +59,8 @@ namespace ComicBookApp
         }
         public void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-           var characterID = AutoSegestBox.ToString();
-           characterID = GetCharacterId();
+           //var characterID = 
+           //characterID = GetCharacterId();
 
 
         }

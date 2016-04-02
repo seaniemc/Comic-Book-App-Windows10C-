@@ -42,6 +42,10 @@ namespace ComicBookApp
                         character.thumbnail.path,
                         character.thumbnail.extension);
 
+                    character.thumbnail.extraLarge= String.Format("{0}/portrait_uncanny.{1}",
+                        character.thumbnail.path,
+                        character.thumbnail.extension);
+
                     marvelCharacters.Add(character);
                 }
                 
@@ -66,6 +70,10 @@ namespace ComicBookApp
                         comic.thumbnail.extension);
 
                     comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                        comic.thumbnail.path,
+                        comic.thumbnail.extension);
+
+                    comic.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
                         comic.thumbnail.path,
                         comic.thumbnail.extension);
 

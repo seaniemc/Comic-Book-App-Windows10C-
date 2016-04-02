@@ -42,5 +42,7 @@ namespace ComicBookApp
             MyProgressRing2.IsEnabled = false;
             MyProgressRing2.Visibility = Visibility.Collapsed;
         }
+
+       
     }
 }

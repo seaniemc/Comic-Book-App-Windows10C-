@@ -9,7 +9,6 @@
                         
     mc:Ignorable="d">
     <Page.Resources>
-        
     </Page.Resources>
 
     <Grid >
@@ -18,30 +17,54 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <RelativePanel x:ConnectionId='2' Name="MyRelativePanel" Style="{StaticResource MyRelativePanel}">
-            <Button x:ConnectionId='8' Name="HamBurgerButton"
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:ConnectionId='2' x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='3' x:Name="MidiemLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    
+
+        <RelativePanel x:ConnectionId='4' Name="MyRelativePanel" Style="{StaticResource MyRelativePanel}">
+            <Button x:ConnectionId='10' Name="HamBurgerButton"
                     RelativePanel.AlignLeftWithPanel="True" FontFamily="Segoe MDL2 Assets" 
                     Content="&#xE700;" Width="45" Height="45"
                     HorizontalAlignment="Center"                              
                     Foreground="WhiteSmoke" BorderBrush="IndianRed"/>
-            <TextBlock x:ConnectionId='9' RelativePanel.RightOf="HamBurgerButton" Name="TitleTextBlock"
+            <TextBlock x:ConnectionId='11' RelativePanel.RightOf="HamBurgerButton" Name="TitleTextBlock"
                        Margin="30,0,0,0" Style="{StaticResource MyTextBlock1}"/>
-            <AutoSuggestBox x:ConnectionId='10' Name="AutoSegestBox" 
+            <AutoSuggestBox x:ConnectionId='12' Name="AutoSegestBox" 
                             PlaceholderText="Enter Character ID" RelativePanel.LeftOf="SearchButton"
                             Width="200" Margin="0,0,0,15" />
-            <Button x:ConnectionId='11' Name="SearchButton" 
+            <Button x:ConnectionId='13' Name="SearchButton" 
                     RelativePanel.AlignRightWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
+                    Foreground="WhiteSmoke"
                     FontSize="20" 
                     Content="&#xE1A3;"                           
               />
         </RelativePanel>
 
-        <SplitView x:ConnectionId='3' Name="SlpitView" Grid.Row="1" DisplayMode="CompactOverlay"
+        <SplitView x:ConnectionId='5' Name="SlpitView" Grid.Row="1" DisplayMode="CompactOverlay"
                    OpenPaneLength="160" CompactPaneLength="45" >
             <SplitView.Pane >
-                <ListBox x:ConnectionId='4' SelectionMode="Single"                                             Background="Black">
-                    <ListBoxItem x:ConnectionId='5' Name="Character">
+                <ListBox x:ConnectionId='6' SelectionMode="Single"                                             Background="Black">
+                    <ListBoxItem x:ConnectionId='7' Name="Character">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE77B;"
                                        FontFamily="Segoe MDL2 Assets"
@@ -50,7 +73,7 @@
                                        Style="{StaticResource MyTextBlock1}" Margin="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem x:ConnectionId='6' Name="Comics">
+                    <ListBoxItem x:ConnectionId='8' Name="Comics">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="&#xE8F1;"
                                        FontFamily="Segoe MDL2 Assets"
@@ -62,7 +85,7 @@
                 </ListBox>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:ConnectionId='7' Name="MyFrame"></Frame>
+                <Frame x:ConnectionId='9' Name="MyFrame"></Frame>
             </SplitView.Content>
         </SplitView>
        
