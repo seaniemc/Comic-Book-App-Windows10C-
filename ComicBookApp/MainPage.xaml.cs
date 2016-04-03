@@ -52,18 +52,7 @@ namespace ComicBookApp
               TitleTextBlock.Text = "Comics";
             }
         }
-        public string GetCharacterId()
-        {
-            string characterId = "";
-            return characterId;
-        }
-        public void SearchButton_Click(object sender, RoutedEventArgs e)
-        {
-           //var characterID = 
-           //characterID = GetCharacterId();
-
-
-        }
+       
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

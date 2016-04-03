@@ -16,6 +16,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <VisualStateManager.VisualStateGroups>
@@ -40,30 +41,52 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         
-        <ListView x:ConnectionId='4' Name="MasterListView"                                    >
+        <ListView x:ConnectionId='4' Name="ComicListView"                                    >
             <ListView.ItemTemplate>
                 <DataTemplate                             >
-                    <StackPanel x:ConnectionId='6' Orientation="Horizontal" Margin="20,0,0,0">
-                        <Rectangle  Width="150" Height="150" >
-                            <Rectangle.Fill>
-                                <ImageBrush x:ConnectionId='9'                                             />
-                            </Rectangle.Fill>
-                        </Rectangle>
+                    <StackPanel x:ConnectionId='10' Orientation="Horizontal" Margin="20,0,0,0">
+                        <Image x:ConnectionId='11'                                        Width="200" Height="200" />
                         <StackPanel Orientation="Vertical" Margin="10,0,10,0">
-                            <TextBlock x:ConnectionId='7' TextAlignment="Justify"                      
+                            <TextBlock x:ConnectionId='12'                      
                                     VerticalAlignment="Center"
                                     TextWrapping="Wrap"
                                     Margin="10,0,10,0"
                                     FontSize="18"/>
-                            <TextBlock x:ConnectionId='8'                               TextWrapping="Wrap" 
-                                            Margin="10,10,10,0" TextAlignment="Justify"/>
+                            <TextBlock x:ConnectionId='13'                               TextWrapping="Wrap" 
+                                            Margin="10,10,10,0" />
                            
                         </StackPanel>
                 </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Grid Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="700"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ListView x:ConnectionId='6' Name="ComicNameAndDescription"                                     >
+                <ListView.ItemTemplate >
+                    <DataTemplate                             >
+                        <StackPanel x:ConnectionId='7' Orientation="Vertical" Margin="10,0,0,0" >
+                            <TextBlock x:ConnectionId='8'                      
+                                            VerticalAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Margin="10,0,0,0"
+                                            FontSize="18"/>
+                            <TextBlock x:ConnectionId='9'                               TextWrapping="Wrap" 
+                                                    Margin="10,10,10,0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
         <TextBlock Text="Data provided by Marvel. © 2015 Marvel" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 

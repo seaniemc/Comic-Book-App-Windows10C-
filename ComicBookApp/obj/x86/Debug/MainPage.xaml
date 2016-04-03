@@ -56,7 +56,7 @@
                     FontFamily="Segoe MDL2 Assets"
                     Foreground="WhiteSmoke"
                     FontSize="20" 
-                    Content="&#xE1A3;"                           
+                    Content="&#xE1A3;"
               />
         </RelativePanel>
 

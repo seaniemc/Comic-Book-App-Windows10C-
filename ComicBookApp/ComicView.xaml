@@ -16,6 +16,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <VisualStateManager.VisualStateGroups>
@@ -40,30 +41,52 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         
-        <ListView Name="MasterListView" ItemsSource="{x:Bind MarvelComics}">
+        <ListView Name="ComicListView" ItemsSource="{x:Bind MarvelComics}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="data:ComicComic">
                     <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
-                        <Rectangle  Width="150" Height="150" >
-                            <Rectangle.Fill>
-                                <ImageBrush ImageSource="{x:Bind thumbnail.extraLarge}" />
-                            </Rectangle.Fill>
-                        </Rectangle>
+                        <Image Source="{x:Bind thumbnail.extraLarge}" Width="200" Height="200" />
                         <StackPanel Orientation="Vertical" Margin="10,0,10,0">
-                            <TextBlock TextAlignment="Justify" Text="{x:Bind title}"
+                            <TextBlock Text="{x:Bind title}"
                                     VerticalAlignment="Center"
                                     TextWrapping="Wrap"
                                     Margin="10,0,10,0"
                                     FontSize="18"/>
                             <TextBlock Text="{x:Bind description  }" TextWrapping="Wrap" 
-                                            Margin="10,10,10,0" TextAlignment="Justify"/>
+                                            Margin="10,10,10,0" />
                            
                         </StackPanel>
                 </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Grid Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="700"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ListView Name="ComicNameAndDescription" ItemsSource="{x:Bind MarvelComics}" >
+                <ListView.ItemTemplate >
+                    <DataTemplate x:DataType="data:ComicComic">
+                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
+                            <TextBlock Text="{x:Bind title}"
+                                            VerticalAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Margin="10,0,0,0"
+                                            FontSize="18"/>
+                            <TextBlock Text="{x:Bind description  }" TextWrapping="Wrap" 
+                                                    Margin="10,10,10,0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
         <TextBlock Text="Data provided by Marvel. © 2015 Marvel" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 

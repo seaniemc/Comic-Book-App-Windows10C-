@@ -11,46 +11,66 @@
 
     <Grid Style="{StaticResource MyGrid}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-       
-        <ListView x:ConnectionId='2' Name="MasterListView"                                         Grid.Row="0">
+
+        <ListView x:ConnectionId='2' Name="CharacterListView"                                         >
             <ListView.ItemTemplate >
                 <DataTemplate                            >
-                    <StackPanel x:ConnectionId='4' Orientation="Horizontal" Margin="10,5,20,5">
-                        <StackPanel>
-                            <TextBlock x:ConnectionId='6'                     
-                                       VerticalAlignment="Center"
-                                       TextWrapping="Wrap"
-                                       Margin="10,0,20,0"
-                                       FontSize="18" />
-                            <TextBlock x:ConnectionId='7' Grid.Row="1"                              TextWrapping="Wrap" Margin="10,0,20,0"/>
-                        </StackPanel>
-                        <Ellipse Width="45" Height="45">
-                            <Ellipse.Fill>
-                                <ImageBrush x:ConnectionId='5'                                        />
-                            </Ellipse.Fill>
-                        </Ellipse >
+                    <StackPanel x:ConnectionId='8' Orientation="Horizontal" Margin="10,5,20,5" >
+                        <Image x:ConnectionId='9'                                        Width="150" Height="150" />
+                        <TextBlock x:ConnectionId='10'                     
+                                            VerticalAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Margin="10,0,0,0"
+                                            FontSize="18"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        
+        <Grid Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="700"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <ListView x:ConnectionId='4' Name="NameAndDescription"                                         >
+                <ListView.ItemTemplate >
+                    <DataTemplate                            >
+                        <StackPanel x:ConnectionId='5' Orientation="Vertical" Margin="10,0,0,0" >
+                            <TextBlock x:ConnectionId='6'                     
+                                            VerticalAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Margin="10,0,0,0"
+                                            FontSize="18"/>
+                            <TextBlock x:ConnectionId='7'                               TextWrapping="Wrap" 
+                                                    Margin="10,10,10,0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
 
         <TextBlock Text="Data provided by Marvel. © 2016 Marvel" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Center" 
-                   Grid.Row="1" />
+                   Grid.Row="1" 
+                   Grid.ColumnSpan="2"/>
 
         <ProgressRing x:ConnectionId='3' Name="MyProgressRing"
                       Width="100"
                       Height="100"
                       Foreground="Gray"
-                      Grid.RowSpan="1"
+                      Grid.ColumnSpan="2"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center" />
 
