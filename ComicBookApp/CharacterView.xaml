@@ -10,69 +10,68 @@
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource MyGrid}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-        <ListView Name="CharacterListView" ItemsSource="{x:Bind MarvelCharacters}" >
-            <ListView.ItemTemplate >
-                <DataTemplate x:DataType="data:Character">
-                    <StackPanel Orientation="Horizontal" Margin="10,5,20,5" >
-                        <Image Source="{x:Bind thumbnail.extraLarge}" Width="150" Height="150" />
-                        <TextBlock Text="{x:Bind name}"
-                                            VerticalAlignment="Center"
-                                            TextWrapping="Wrap"
-                                            Margin="10,0,0,0"
-                                            FontSize="18"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        
-        <Grid Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
-                  VerticalAlignment="Top">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition MaxWidth="700"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            
-            <ListView Name="NameAndDescription" ItemsSource="{x:Bind MarvelCharacters}" >
-                <ListView.ItemTemplate >
-                    <DataTemplate x:DataType="data:Character">
-                        <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
-                            <TextBlock Text="{x:Bind name}"
-                                            VerticalAlignment="Center"
-                                            TextWrapping="Wrap"
-                                            Margin="10,0,0,0"
-                                            FontSize="18"/>
-                            <TextBlock Text="{x:Bind description  }" TextWrapping="Wrap" 
-                                                    Margin="10,10,10,0" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
+                <ListView Name="CharacterListView" ItemsSource="{x:Bind MarvelCharacters}" >
+                    <ListView.ItemTemplate >
+                        <DataTemplate x:DataType="data:Character">
+                            <StackPanel Orientation="Horizontal" Margin="10,5,20,5" >
+                                <Image Source="{x:Bind thumbnail.extraLarge}" Width="150" Height="150" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-        <TextBlock Text="Data provided by Marvel. © 2016 Marvel" 
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Center" 
-                   Grid.Row="1" 
-                   Grid.ColumnSpan="2"/>
+                <Grid Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" 
+                      VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="700"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
 
-        <ProgressRing Name="MyProgressRing"
-                      Width="100"
-                      Height="100"
-                      Foreground="Gray"
-                      Grid.ColumnSpan="2"
-                      VerticalAlignment="Center"
-                      HorizontalAlignment="Center" />
+                    <ListView Name="NameAndDescription" ItemsSource="{x:Bind MarvelCharacters}" >
+                        <ListView.ItemTemplate >
+                            <DataTemplate x:DataType="data:Character">
+                                <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
+                                    <TextBlock Text="{x:Bind name}"
+                                                VerticalAlignment="Center"
+                                                TextWrapping="Wrap"
+                                                Margin="10,0,0,0"
+                                                FontSize="18"/>
+                                    <TextBlock Text="{x:Bind description  }" TextWrapping="Wrap" 
+                                                        Margin="10,10,10,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
 
+                <TextBlock Text="Data provided by Marvel. © 2016 Marvel" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       Grid.Row="1" 
+                       Grid.ColumnSpan="2"/>
+
+                <ProgressRing Name="MyProgressRing"
+                          Width="100"
+                          Height="100"
+                          Foreground="Gray"
+                          Grid.ColumnSpan="2"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center" />
+
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
