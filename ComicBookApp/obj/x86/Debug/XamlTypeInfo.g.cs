@@ -132,7 +132,7 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[37];
+            _typeNameTable = new string[46];
             _typeNameTable[0] = "ComicBookApp.CharacterView";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -169,9 +169,18 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             _typeNameTable[33] = "ComicBookApp.Models.Characters";
             _typeNameTable[34] = "ComicBookApp.Models.ComicStories";
             _typeNameTable[35] = "ComicBookApp.Models.ComicEvents";
-            _typeNameTable[36] = "ComicBookApp.MainPage";
+            _typeNameTable[36] = "ComicBookApp.CreatorView";
+            _typeNameTable[37] = "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.CreatorCreator>";
+            _typeNameTable[38] = "System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.CreatorCreator>";
+            _typeNameTable[39] = "ComicBookApp.Models.CreatorCreator";
+            _typeNameTable[40] = "ComicBookApp.Models.CreatorThumbnail";
+            _typeNameTable[41] = "ComicBookApp.Models.CreatorComics";
+            _typeNameTable[42] = "ComicBookApp.Models.CreatorSeries";
+            _typeNameTable[43] = "ComicBookApp.Models.CreatorStories";
+            _typeNameTable[44] = "ComicBookApp.Models.CreatorEvents";
+            _typeNameTable[45] = "ComicBookApp.MainPage";
 
-            _typeTable = new global::System.Type[37];
+            _typeTable = new global::System.Type[46];
             _typeTable[0] = typeof(global::ComicBookApp.CharacterView);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -208,7 +217,16 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             _typeTable[33] = typeof(global::ComicBookApp.Models.Characters);
             _typeTable[34] = typeof(global::ComicBookApp.Models.ComicStories);
             _typeTable[35] = typeof(global::ComicBookApp.Models.ComicEvents);
-            _typeTable[36] = typeof(global::ComicBookApp.MainPage);
+            _typeTable[36] = typeof(global::ComicBookApp.CreatorView);
+            _typeTable[37] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.CreatorCreator>);
+            _typeTable[38] = typeof(global::System.Collections.ObjectModel.Collection<global::ComicBookApp.Models.CreatorCreator>);
+            _typeTable[39] = typeof(global::ComicBookApp.Models.CreatorCreator);
+            _typeTable[40] = typeof(global::ComicBookApp.Models.CreatorThumbnail);
+            _typeTable[41] = typeof(global::ComicBookApp.Models.CreatorComics);
+            _typeTable[42] = typeof(global::ComicBookApp.Models.CreatorSeries);
+            _typeTable[43] = typeof(global::ComicBookApp.Models.CreatorStories);
+            _typeTable[44] = typeof(global::ComicBookApp.Models.CreatorEvents);
+            _typeTable[45] = typeof(global::ComicBookApp.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -273,7 +291,16 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
         private object Activate_33_Characters() { return new global::ComicBookApp.Models.Characters(); }
         private object Activate_34_ComicStories() { return new global::ComicBookApp.Models.ComicStories(); }
         private object Activate_35_ComicEvents() { return new global::ComicBookApp.Models.ComicEvents(); }
-        private object Activate_36_MainPage() { return new global::ComicBookApp.MainPage(); }
+        private object Activate_36_CreatorView() { return new global::ComicBookApp.CreatorView(); }
+        private object Activate_37_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.CreatorCreator>(); }
+        private object Activate_38_Collection() { return new global::System.Collections.ObjectModel.Collection<global::ComicBookApp.Models.CreatorCreator>(); }
+        private object Activate_39_CreatorCreator() { return new global::ComicBookApp.Models.CreatorCreator(); }
+        private object Activate_40_CreatorThumbnail() { return new global::ComicBookApp.Models.CreatorThumbnail(); }
+        private object Activate_41_CreatorComics() { return new global::ComicBookApp.Models.CreatorComics(); }
+        private object Activate_42_CreatorSeries() { return new global::ComicBookApp.Models.CreatorSeries(); }
+        private object Activate_43_CreatorStories() { return new global::ComicBookApp.Models.CreatorStories(); }
+        private object Activate_44_CreatorEvents() { return new global::ComicBookApp.Models.CreatorEvents(); }
+        private object Activate_45_MainPage() { return new global::ComicBookApp.MainPage(); }
         private void VectorAdd_3_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Character>)instance;
@@ -332,6 +359,18 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
         {
             var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.Image>)instance;
             var newItem = (global::ComicBookApp.Models.Image)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_37_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.CreatorCreator>)instance;
+            var newItem = (global::ComicBookApp.Models.CreatorCreator)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_38_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::ComicBookApp.Models.CreatorCreator>)instance;
+            var newItem = (global::ComicBookApp.Models.CreatorCreator)item;
             collection.Add(newItem);
         }
 
@@ -632,9 +671,87 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 36:   //  ComicBookApp.MainPage
+            case 36:   //  ComicBookApp.CreatorView
                 userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_36_MainPage;
+                userType.Activator = Activate_36_CreatorView;
+                userType.AddMemberName("MarvelCreator");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.CreatorCreator>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.CreatorCreator>"));
+                userType.CollectionAdd = VectorAdd_37_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 38:   //  System.Collections.ObjectModel.Collection`1<ComicBookApp.Models.CreatorCreator>
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_38_Collection;
+                userType.CollectionAdd = VectorAdd_38_Collection;
+                xamlType = userType;
+                break;
+
+            case 39:   //  ComicBookApp.Models.CreatorCreator
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_39_CreatorCreator;
+                userType.AddMemberName("id");
+                userType.AddMemberName("firstName");
+                userType.AddMemberName("middleName");
+                userType.AddMemberName("lastName");
+                userType.AddMemberName("suffix");
+                userType.AddMemberName("fullName");
+                userType.AddMemberName("modified");
+                userType.AddMemberName("thumbnail");
+                userType.AddMemberName("resourceURI");
+                userType.AddMemberName("comics");
+                userType.AddMemberName("series");
+                userType.AddMemberName("stories");
+                userType.AddMemberName("events");
+                userType.AddMemberName("urls");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 40:   //  ComicBookApp.Models.CreatorThumbnail
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 41:   //  ComicBookApp.Models.CreatorComics
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 42:   //  ComicBookApp.Models.CreatorSeries
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 43:   //  ComicBookApp.Models.CreatorStories
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 44:   //  ComicBookApp.Models.CreatorEvents
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 45:   //  ComicBookApp.MainPage
+                userType = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_45_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1173,6 +1290,156 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
             var that = (global::ComicBookApp.Models.ComicComic)instance;
             that.events = (global::ComicBookApp.Models.ComicEvents)Value;
         }
+        private object get_53_CreatorView_MarvelCreator(object instance)
+        {
+            var that = (global::ComicBookApp.CreatorView)instance;
+            return that.MarvelCreator;
+        }
+        private void set_53_CreatorView_MarvelCreator(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.CreatorView)instance;
+            that.MarvelCreator = (global::System.Collections.ObjectModel.ObservableCollection<global::ComicBookApp.Models.CreatorCreator>)Value;
+        }
+        private object get_54_CreatorCreator_id(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.id;
+        }
+        private void set_54_CreatorCreator_id(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.id = (global::System.Int32)Value;
+        }
+        private object get_55_CreatorCreator_firstName(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.firstName;
+        }
+        private void set_55_CreatorCreator_firstName(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.firstName = (global::System.String)Value;
+        }
+        private object get_56_CreatorCreator_middleName(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.middleName;
+        }
+        private void set_56_CreatorCreator_middleName(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.middleName = (global::System.String)Value;
+        }
+        private object get_57_CreatorCreator_lastName(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.lastName;
+        }
+        private void set_57_CreatorCreator_lastName(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.lastName = (global::System.String)Value;
+        }
+        private object get_58_CreatorCreator_suffix(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.suffix;
+        }
+        private void set_58_CreatorCreator_suffix(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.suffix = (global::System.String)Value;
+        }
+        private object get_59_CreatorCreator_fullName(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.fullName;
+        }
+        private void set_59_CreatorCreator_fullName(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.fullName = (global::System.String)Value;
+        }
+        private object get_60_CreatorCreator_modified(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.modified;
+        }
+        private void set_60_CreatorCreator_modified(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.modified = (global::System.String)Value;
+        }
+        private object get_61_CreatorCreator_thumbnail(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.thumbnail;
+        }
+        private void set_61_CreatorCreator_thumbnail(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.thumbnail = (global::ComicBookApp.Models.CreatorThumbnail)Value;
+        }
+        private object get_62_CreatorCreator_resourceURI(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.resourceURI;
+        }
+        private void set_62_CreatorCreator_resourceURI(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.resourceURI = (global::System.String)Value;
+        }
+        private object get_63_CreatorCreator_comics(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.comics;
+        }
+        private void set_63_CreatorCreator_comics(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.comics = (global::ComicBookApp.Models.CreatorComics)Value;
+        }
+        private object get_64_CreatorCreator_series(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.series;
+        }
+        private void set_64_CreatorCreator_series(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.series = (global::ComicBookApp.Models.CreatorSeries)Value;
+        }
+        private object get_65_CreatorCreator_stories(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.stories;
+        }
+        private void set_65_CreatorCreator_stories(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.stories = (global::ComicBookApp.Models.CreatorStories)Value;
+        }
+        private object get_66_CreatorCreator_events(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.events;
+        }
+        private void set_66_CreatorCreator_events(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.events = (global::ComicBookApp.Models.CreatorEvents)Value;
+        }
+        private object get_67_CreatorCreator_urls(object instance)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            return that.urls;
+        }
+        private void set_67_CreatorCreator_urls(object instance, object Value)
+        {
+            var that = (global::ComicBookApp.Models.CreatorCreator)instance;
+            that.urls = (global::System.Collections.Generic.List<global::ComicBookApp.Models.Url>)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1498,6 +1765,96 @@ namespace ComicBookApp.ComicBookApp_XamlTypeInfo
                 xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "events", "ComicBookApp.Models.ComicEvents");
                 xamlMember.Getter = get_52_ComicComic_events;
                 xamlMember.Setter = set_52_ComicComic_events;
+                break;
+            case "ComicBookApp.CreatorView.MarvelCreator":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.CreatorView");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "MarvelCreator", "System.Collections.ObjectModel.ObservableCollection`1<ComicBookApp.Models.CreatorCreator>");
+                xamlMember.Getter = get_53_CreatorView_MarvelCreator;
+                xamlMember.Setter = set_53_CreatorView_MarvelCreator;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.id":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "id", "Int32");
+                xamlMember.Getter = get_54_CreatorCreator_id;
+                xamlMember.Setter = set_54_CreatorCreator_id;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.firstName":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "firstName", "String");
+                xamlMember.Getter = get_55_CreatorCreator_firstName;
+                xamlMember.Setter = set_55_CreatorCreator_firstName;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.middleName":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "middleName", "String");
+                xamlMember.Getter = get_56_CreatorCreator_middleName;
+                xamlMember.Setter = set_56_CreatorCreator_middleName;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.lastName":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "lastName", "String");
+                xamlMember.Getter = get_57_CreatorCreator_lastName;
+                xamlMember.Setter = set_57_CreatorCreator_lastName;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.suffix":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "suffix", "String");
+                xamlMember.Getter = get_58_CreatorCreator_suffix;
+                xamlMember.Setter = set_58_CreatorCreator_suffix;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.fullName":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "fullName", "String");
+                xamlMember.Getter = get_59_CreatorCreator_fullName;
+                xamlMember.Setter = set_59_CreatorCreator_fullName;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.modified":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "modified", "String");
+                xamlMember.Getter = get_60_CreatorCreator_modified;
+                xamlMember.Setter = set_60_CreatorCreator_modified;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.thumbnail":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "thumbnail", "ComicBookApp.Models.CreatorThumbnail");
+                xamlMember.Getter = get_61_CreatorCreator_thumbnail;
+                xamlMember.Setter = set_61_CreatorCreator_thumbnail;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.resourceURI":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "resourceURI", "String");
+                xamlMember.Getter = get_62_CreatorCreator_resourceURI;
+                xamlMember.Setter = set_62_CreatorCreator_resourceURI;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.comics":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "comics", "ComicBookApp.Models.CreatorComics");
+                xamlMember.Getter = get_63_CreatorCreator_comics;
+                xamlMember.Setter = set_63_CreatorCreator_comics;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.series":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "series", "ComicBookApp.Models.CreatorSeries");
+                xamlMember.Getter = get_64_CreatorCreator_series;
+                xamlMember.Setter = set_64_CreatorCreator_series;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.stories":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "stories", "ComicBookApp.Models.CreatorStories");
+                xamlMember.Getter = get_65_CreatorCreator_stories;
+                xamlMember.Setter = set_65_CreatorCreator_stories;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.events":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "events", "ComicBookApp.Models.CreatorEvents");
+                xamlMember.Getter = get_66_CreatorCreator_events;
+                xamlMember.Setter = set_66_CreatorCreator_events;
+                break;
+            case "ComicBookApp.Models.CreatorCreator.urls":
+                userType = (global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("ComicBookApp.Models.CreatorCreator");
+                xamlMember = new global::ComicBookApp.ComicBookApp_XamlTypeInfo.XamlMember(this, "urls", "System.Collections.Generic.List`1<ComicBookApp.Models.Url>");
+                xamlMember.Getter = get_67_CreatorCreator_urls;
+                xamlMember.Setter = set_67_CreatorCreator_urls;
                 break;
             }
             return xamlMember;

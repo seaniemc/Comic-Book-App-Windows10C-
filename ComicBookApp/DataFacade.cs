@@ -30,7 +30,7 @@ namespace ComicBookApp
             foreach (var character in characters)
             {
                 //filter characters with no image
-                if(character.thumbnail != null
+                if (character.thumbnail != null
                     && character.thumbnail.path != ""
                     && character.thumbnail.path != ImageNotAvailablePath)
                 {
@@ -42,15 +42,39 @@ namespace ComicBookApp
                         character.thumbnail.path,
                         character.thumbnail.extension);
 
-                    character.thumbnail.extraLarge= String.Format("{0}/portrait_uncanny.{1}",
+                    character.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
                         character.thumbnail.path,
                         character.thumbnail.extension);
 
                     marvelCharacters.Add(character);
                 }
-                
+
             }
         }
+
+        private async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
+        {
+            Random random = new Random();
+            var offset = random.Next(MaxCharacters);
+
+            var timeStamp = DateTime.Now.Ticks.ToString();
+            var hash = MakeAHash(timeStamp);
+
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+
+            //call to API
+            HttpClient http = new HttpClient();
+            var response = await http.GetAsync(url);
+            var jsonMess = await response.Content.ReadAsStringAsync();
+
+            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
+
+            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
+
+            return result;
+        }
+        //============================================================================================================================
 
         public static async Task PopulateMarvelComicsAsync(ObservableCollection<ComicComic> marvelComics)
         {
@@ -82,53 +106,6 @@ namespace ComicBookApp
             }
         }
 
-
-        private async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
-        {
-            Random random = new Random();
-            var offset = random.Next(MaxCharacters);
-
-            var timeStamp = DateTime.Now.Ticks.ToString();
-            var hash = MakeAHash(timeStamp);
-
-            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
-
-            //call to API
-            HttpClient http = new HttpClient();
-            var response = await http.GetAsync(url);
-            var jsonMess = await response.Content.ReadAsStringAsync();
-
-            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
-
-            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
-
-            return result;
-        }
-
-        private async static Task<CharacterDataWrapper> GetCharacterIdDataWrapper()
-        {
-            Random random = new Random();
-            var offset = random.Next(MaxCharacters);
-
-            //var characterId = MainPage.GetChar
-            var timeStamp = DateTime.Now.Ticks.ToString();
-            var hash = MakeAHash(timeStamp);
-
-            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
-
-            //call to API
-            HttpClient http = new HttpClient();
-            var response = await http.GetAsync(url);
-            var jsonMess = await response.Content.ReadAsStringAsync();
-
-            var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
-            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
-
-            var result = (CharacterDataWrapper)serializer.ReadObject(ms);
-
-            return result;
-        }
         public static async Task<ComicDataWrapper> GetComicDataWrapper()
         {
             // Assemble the URL
@@ -153,15 +130,71 @@ namespace ComicBookApp
             var result = (ComicDataWrapper)serializer.ReadObject(ms);
             return result;
         }
+        //============================================================================================================================
+        //
+        public static async Task PopulateMarvelCreatorAsync(ObservableCollection<CreatorCreator> marvelCreators)
+        {
+            var creatorDataWrapper = await GetCreatorDataWrapper();
 
+            var creators = creatorDataWrapper.data.results;
+
+            foreach (var creator in creators)
+            {
+                //filter characters with no image
+                if (creator.thumbnail != null
+                    && creator.thumbnail.path != ""
+                    && creator.thumbnail.path != ImageNotAvailablePath)
+                {
+                    creator.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                        creator.thumbnail.path,
+                        creator.thumbnail.extension);
+
+                    creator.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                        creator.thumbnail.path,
+                        creator.thumbnail.extension);
+
+                    creator.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
+                        creator.thumbnail.path,
+                        creator.thumbnail.extension);
+
+                    marvelCreators.Add(creator);
+                }
+            }
+
+        }
+        private async static Task<CreatorDataWrapper> GetCreatorDataWrapper()
+        {
+            Random random = new Random();
+            var offset = random.Next(MaxCharacters);
+
+            var timeStamp = DateTime.Now.Ticks.ToString();
+            var hash = MakeAHash(timeStamp);
+
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/creators?limit=15&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+
+            //call to API
+            HttpClient http = new HttpClient();
+            var response = await http.GetAsync(url);
+            var jsonMess = await response.Content.ReadAsStringAsync();
+
+            var serializer = new DataContractJsonSerializer(typeof(CreatorDataWrapper));
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
+
+            var result = (CreatorDataWrapper)serializer.ReadObject(ms);
+
+            return result;
+        }
+        //=================================================================================================================================
+        //this method creates a hash using the timestamp + PrivateKey + PublicKey it passes the the variable toBeHashed to the 
+        //ComputeMD5 method
         private static string MakeAHash(string timeStamp)
         {
-            
             var toBeHashed = timeStamp + PrivateKey + PublicKey;
             var hashedMessage = ComputeMD5(toBeHashed);
-            return hashedMessage;     
+            return hashedMessage;
         }
 
+        // From:
         // http://stackoverflow.com/questions/8299142/how-to-generate-md5-hash-code-for-my-winrt-app-using-c
         private static string ComputeMD5(string str)
         {
@@ -173,3 +206,7 @@ namespace ComicBookApp
         }
     }
 }
+
+
+
+

@@ -204,3 +204,8 @@ C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicVie
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.g.cs
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.xaml
 C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\ComicView.xbf
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CreatorView.g.i.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CreatorView.g.cs
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CreatorView.xaml
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\obj\x86\Debug\CreatorView.xbf
+C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\x86\Debug\CreatorView.xbf

@@ -104,12 +104,16 @@
     <Compile Include="ComicView.xaml.cs">
       <DependentUpon>ComicView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreatorView.xaml.cs">
+      <DependentUpon>CreatorView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DataFacade.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\CharacterDataWrapper.cs" />
     <Compile Include="Models\ComicDataWrapper.cs" />
+    <Compile Include="Models\CreatorDataWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreatorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

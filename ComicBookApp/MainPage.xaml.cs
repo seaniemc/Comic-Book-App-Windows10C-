@@ -51,6 +51,12 @@ namespace ComicBookApp
               MyFrame.Navigate(typeof(ComicView));
               TitleTextBlock.Text = "Comics";
             }
+            else if (Creators.IsSelected)
+            {
+                //BackButton.Visibility = Visibility.Visible;
+                MyFrame.Navigate(typeof(CreatorView));
+                TitleTextBlock.Text = "Creators";
+            }
         }
        
 

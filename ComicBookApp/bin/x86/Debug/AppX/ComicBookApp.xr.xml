@@ -101,6 +101,7 @@
     </RootType>
     <RootType FullName="ComicBookApp.CharacterView" />
     <RootType FullName="ComicBookApp.ComicView" />
+    <RootType FullName="ComicBookApp.CreatorView" />
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
     </RootType>
