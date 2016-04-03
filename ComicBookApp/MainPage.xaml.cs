@@ -62,8 +62,8 @@ namespace ComicBookApp
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            MyFrame.Navigate(typeof(CharacterView));
-            TitleTextBlock.Text = "Character";
+            MyFrame.Navigate(typeof(ComicView));
+            TitleTextBlock.Text = "Comics";
         }
     }
 

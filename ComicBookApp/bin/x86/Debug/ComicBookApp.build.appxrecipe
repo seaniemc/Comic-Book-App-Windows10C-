@@ -342,6 +342,9 @@
     <AppxPackagedFile Include="C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\ReadMe.txt">
+      <PackagePath>ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

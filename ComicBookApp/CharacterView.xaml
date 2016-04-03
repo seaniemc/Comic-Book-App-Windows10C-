@@ -45,6 +45,7 @@
                             <DataTemplate x:DataType="data:Character">
                                 <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
                                     <TextBlock Text="{x:Bind name}"
+                                                Style="{StaticResource MyTextBlock2}"
                                                 VerticalAlignment="Center"
                                                 TextWrapping="Wrap"
                                                 Margin="10,0,0,0"
@@ -59,17 +60,10 @@
 
                 <TextBlock Text="Data provided by Marvel. © 2016 Marvel" 
                        VerticalAlignment="Center" 
-                       HorizontalAlignment="Center" 
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource MyTextBlock2}"
                        Grid.Row="1" 
                        Grid.ColumnSpan="2"/>
-
-                <ProgressRing Name="MyProgressRing"
-                          Width="100"
-                          Height="100"
-                          Foreground="Gray"
-                          Grid.ColumnSpan="2"
-                          VerticalAlignment="Center"
-                          HorizontalAlignment="Center" />
 
             </Grid>
         </ScrollViewer>

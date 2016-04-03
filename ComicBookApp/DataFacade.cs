@@ -23,32 +23,38 @@ namespace ComicBookApp
 
         public static async Task PopulateMarvelCharactersAsync(ObservableCollection<Character> marvelCharacters)
         {
-            var characterDataWrapper = await GetCharacterDataWrapper();
+            try {
+                var characterDataWrapper = await GetCharacterDataWrapper();
 
-            var characters = characterDataWrapper.data.results;
+                var characters = characterDataWrapper.data.results;
 
-            foreach (var character in characters)
-            {
-                //filter characters with no image
-                if (character.thumbnail != null
-                    && character.thumbnail.path != ""
-                    && character.thumbnail.path != ImageNotAvailablePath)
+                foreach (var character in characters)
                 {
-                    character.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                        character.thumbnail.path,
-                        character.thumbnail.extension);
+                    //filter characters with no image
+                    if (character.thumbnail != null
+                        && character.thumbnail.path != ""
+                        && character.thumbnail.path != ImageNotAvailablePath)
+                    {
+                        character.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                            character.thumbnail.path,
+                            character.thumbnail.extension);
 
-                    character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
-                        character.thumbnail.path,
-                        character.thumbnail.extension);
+                        character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                            character.thumbnail.path,
+                            character.thumbnail.extension);
 
-                    character.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
-                        character.thumbnail.path,
-                        character.thumbnail.extension);
+                        character.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
+                            character.thumbnail.path,
+                            character.thumbnail.extension);
 
-                    marvelCharacters.Add(character);
+                        marvelCharacters.Add(character);
+                    }
+
                 }
-
+            }
+            catch (Exception)
+            {
+                return;
             }
         }
 
@@ -78,31 +84,37 @@ namespace ComicBookApp
 
         public static async Task PopulateMarvelComicsAsync(ObservableCollection<ComicComic> marvelComics)
         {
-            var comicDataWrapper = await GetComicDataWrapper();
+            try {
+                var comicDataWrapper = await GetComicDataWrapper();
 
-            var comics = comicDataWrapper.data.results;
+                var comics = comicDataWrapper.data.results;
 
-            foreach (var comic in comics)
-            {
-                //filter characters with no image
-                if (comic.thumbnail != null
-                    && comic.thumbnail.path != ""
-                    && comic.thumbnail.path != ImageNotAvailablePath)
+                foreach (var comic in comics)
                 {
-                    comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                        comic.thumbnail.path,
-                        comic.thumbnail.extension);
+                    //filter characters with no image
+                    if (comic.thumbnail != null
+                        && comic.thumbnail.path != ""
+                        && comic.thumbnail.path != ImageNotAvailablePath)
+                    {
+                        comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                            comic.thumbnail.path,
+                            comic.thumbnail.extension);
 
-                    comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
-                        comic.thumbnail.path,
-                        comic.thumbnail.extension);
+                        comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                            comic.thumbnail.path,
+                            comic.thumbnail.extension);
 
-                    comic.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
-                        comic.thumbnail.path,
-                        comic.thumbnail.extension);
+                        comic.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
+                            comic.thumbnail.path,
+                            comic.thumbnail.extension);
 
-                    marvelComics.Add(comic);
+                        marvelComics.Add(comic);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                return;
             }
         }
 
@@ -134,31 +146,39 @@ namespace ComicBookApp
         //
         public static async Task PopulateMarvelCreatorAsync(ObservableCollection<CreatorCreator> marvelCreators)
         {
-            var creatorDataWrapper = await GetCreatorDataWrapper();
-
-            var creators = creatorDataWrapper.data.results;
-
-            foreach (var creator in creators)
+            try
             {
-                //filter characters with no image
-                if (creator.thumbnail != null
-                    && creator.thumbnail.path != ""
-                    && creator.thumbnail.path != ImageNotAvailablePath)
+
+                var creatorDataWrapper = await GetCreatorDataWrapper();
+
+                var creators = creatorDataWrapper.data.results;
+
+                foreach (var creator in creators)
                 {
-                    creator.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                        creator.thumbnail.path,
-                        creator.thumbnail.extension);
+                    //filter characters with no image
+                    if (creator.thumbnail != null
+                        && creator.thumbnail.path != ""
+                        && creator.thumbnail.path != ImageNotAvailablePath)
+                    {
+                        creator.thumbnail.small = String.Format("{0}/standard_small.{1}",
+                            creator.thumbnail.path,
+                            creator.thumbnail.extension);
 
-                    creator.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
-                        creator.thumbnail.path,
-                        creator.thumbnail.extension);
+                        creator.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
+                            creator.thumbnail.path,
+                            creator.thumbnail.extension);
 
-                    creator.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
-                        creator.thumbnail.path,
-                        creator.thumbnail.extension);
+                        creator.thumbnail.extraLarge = String.Format("{0}/portrait_uncanny.{1}",
+                            creator.thumbnail.path,
+                            creator.thumbnail.extension);
 
-                    marvelCreators.Add(creator);
+                        marvelCreators.Add(creator);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                return;
             }
 
         }

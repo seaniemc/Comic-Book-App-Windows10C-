@@ -16,7 +16,12 @@
             <Setter Property="FontWeight" Value="ExtraBold"/>
         </Style>
         <Style TargetType="Grid" x:Key="MyGrid">
-            <Setter Property="Background" Value="LightCyan"/>
+            <Setter Property="Background" Value="DarkOliveGreen"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MyTextBlock2">
+            <Setter Property="FontStyle" Value="Oblique"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
         </Style>
          
     </Application.Resources>

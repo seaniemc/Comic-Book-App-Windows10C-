@@ -1,12 +1,12 @@
-﻿<Page
-    x:Class="ComicBookApp.CreatorView"
+﻿<Page x:ConnectionId='1'
+    x:Class="ComicBookApp.CharacterView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ComicBookApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:ComicBookApp.Models"
-    Loaded="Page_Loaded"
+                        
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource MyGrid}">
@@ -21,33 +21,11 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <!--   <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup>
-                    <VisualState x:Name="NarrowLayout">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="0" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                        
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="WideLayout">
-                        <VisualState.StateTriggers>
-                            <AdaptiveTrigger MinWindowWidth="900" />
-                        </VisualState.StateTriggers>
-                        <VisualState.Setters>
-                        
-                        
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>-->
-
-                <ListView Name="ComicListView" ItemsSource="{x:Bind MarvelCreator}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="data:CreatorCreator">
-                            <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                                <Image Source="{x:Bind thumbnail.extraLarge}" Width="200" Height="200" />
+                <ListView x:ConnectionId='2' Name="CharacterListView"                                         >
+                    <ListView.ItemTemplate >
+                        <DataTemplate                            >
+                            <StackPanel x:ConnectionId='7' Orientation="Horizontal" Margin="10,5,20,5" >
+                                <Image x:ConnectionId='8'                                        Width="150" Height="150" />
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -62,18 +40,18 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <ListView Name="ComicNameAndDescription" ItemsSource="{x:Bind MarvelCreator}" >
+                    <ListView x:ConnectionId='3' Name="NameAndDescription"                                         >
                         <ListView.ItemTemplate >
-                            <DataTemplate x:DataType="data:CreatorCreator">
-                                <StackPanel Orientation="Vertical" Margin="10,0,0,0" >
-                                    <TextBlock Text="{x:Bind fullName}"
-                                                VerticalAlignment="Center"
+                            <DataTemplate                            >
+                                <StackPanel x:ConnectionId='4' Orientation="Vertical" Margin="10,0,0,0" >
+                                    <TextBlock x:ConnectionId='5'                     
                                                 Style="{StaticResource MyTextBlock2}"
+                                                VerticalAlignment="Center"
                                                 TextWrapping="Wrap"
+                                                Margin="10,0,0,0"
                                                 FontSize="18"/>
-
-                                    <TextBlock Text="{x:Bind resourceURI }" TextWrapping="Wrap" 
-                                                        Margin="0,10,10,0" />
+                                    <TextBlock x:ConnectionId='6'                               TextWrapping="Wrap" 
+                                                        Margin="10,10,10,0" />
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -82,7 +60,7 @@
 
                 <TextBlock Text="Data provided by Marvel. © 2016 Marvel" 
                        VerticalAlignment="Center" 
-                       HorizontalAlignment="Center" 
+                       HorizontalAlignment="Center"
                        Style="{StaticResource MyTextBlock2}"
                        Grid.Row="1" 
                        Grid.ColumnSpan="2"/>
@@ -91,3 +69,4 @@
         </ScrollViewer>
     </Grid>
 </Page>
+

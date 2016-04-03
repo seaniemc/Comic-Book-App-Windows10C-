@@ -33,7 +33,7 @@ namespace ComicBookApp
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
+        { 
             await DataFacade.PopulateMarvelCreatorAsync(MarvelCreator);
         }
     }
