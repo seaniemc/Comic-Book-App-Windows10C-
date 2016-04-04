@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="43532Seaniemc.ComicMarvelBook" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Scale>200</Scale>
+			<TargetSize>24</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ApplicationInsights.config" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/ApplicationInsights.config">
+				<Candidate type="Path">
+					<Value>ApplicationInsights.config</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CharacterView.xbf" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/CharacterView.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ComicBookApp.xr.xml" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/ComicBookApp.xr.xml">
+				<Candidate type="Path">
+					<Value>ComicBookApp.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ComicView.xbf" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/ComicView.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CreatorView.xbf" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/CreatorView.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/MainPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReadMe.txt" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/ReadMe.txt">
+				<Candidate type="Path">
+					<Value>ReadMe.txt</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="BadgeLogo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/BadgeLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\BadgeLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square310x310Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/Square310x310Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square310x310Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square71x71Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/Square71x71Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square71x71Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Models">
+				<ResourceMapSubtree name="Assets">
+					<NamedResource name="1240x600.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/1240x600.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\1240x600.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="24x24-large.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/24x24-large.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\24x24-large.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="24x24.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/24x24.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\24x24.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="300x300.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/300x300.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\300x300.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="310x310.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/310x310.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\310x310.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="620x300.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/620x300.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\620x300.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="71x71-large.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/71x71-large.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\71x71-large.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="71x71.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/71x71.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\71x71.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="88x88-large.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/88x88-large.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\88x88-large.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="88x88.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/88x88.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\88x88.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="LockScreenLogo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/LockScreenLogo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>Models\Assets\LockScreenLogo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="SplashScreen.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/SplashScreen.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>Models\Assets\SplashScreen.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Square150x150Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/Square150x150Logo.png">
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>Models\Assets\Square150x150Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Square44x44Logo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/Square44x44Logo.png">
+						<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+							<Value>Models\Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+						</Candidate>
+						<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+							<Value>Models\Assets\Square44x44Logo.scale-200.png</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="StoreLogo.png" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Models/Assets/StoreLogo.png">
+						<Candidate type="Path">
+							<Value>Models\Assets\StoreLogo.png</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://43532Seaniemc.ComicMarvelBook/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

@@ -35,10 +35,6 @@ namespace ComicBookApp
                         && character.thumbnail.path != ""
                         && character.thumbnail.path != ImageNotAvailablePath)
                     {
-                        character.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                            character.thumbnail.path,
-                            character.thumbnail.extension);
-
                         character.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                             character.thumbnail.path,
                             character.thumbnail.extension);
@@ -60,28 +56,32 @@ namespace ComicBookApp
 
         private async static Task<CharacterDataWrapper> GetCharacterDataWrapper()
         {
+            //creates a new instance of random
             Random random = new Random();
+            //creates the offset used in the url the random is vretaed using the max charaters which is 1500
             var offset = random.Next(MaxCharacters);
 
             var timeStamp = DateTime.Now.Ticks.ToString();
             var hash = MakeAHash(timeStamp);
 
-            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=10&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/characters?limit=15&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
             //call to API
             HttpClient http = new HttpClient();
             var response = await http.GetAsync(url);
             var jsonMess = await response.Content.ReadAsStringAsync();
 
+            // Deserializes JSON data to c# objects
             var serializer = new DataContractJsonSerializer(typeof(CharacterDataWrapper));
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMess));
 
+            
             var result = (CharacterDataWrapper)serializer.ReadObject(ms);
 
             return result;
         }
         //============================================================================================================================
-
+        //this method adds the Marvel comics to an Observable Collection
         public static async Task PopulateMarvelComicsAsync(ObservableCollection<ComicComic> marvelComics)
         {
             try {
@@ -96,10 +96,6 @@ namespace ComicBookApp
                         && comic.thumbnail.path != ""
                         && comic.thumbnail.path != ImageNotAvailablePath)
                     {
-                        comic.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                            comic.thumbnail.path,
-                            comic.thumbnail.extension);
-
                         comic.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                             comic.thumbnail.path,
                             comic.thumbnail.extension);
@@ -130,12 +126,12 @@ namespace ComicBookApp
 
             string url = String.Format("http://gateway.marvel.com:80/v1/public/comics?limit=20&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
-            // Call out to Marvel
+            // Call out Api
             HttpClient http = new HttpClient();
             var response = await http.GetAsync(url);
             var jsonMessage = await response.Content.ReadAsStringAsync();
 
-            // Response -> string / json -> deserialize
+            // Deserializes JSON data to c# objects
             var serializer = new DataContractJsonSerializer(typeof(ComicDataWrapper));
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonMessage));
 
@@ -148,7 +144,6 @@ namespace ComicBookApp
         {
             try
             {
-
                 var creatorDataWrapper = await GetCreatorDataWrapper();
 
                 var creators = creatorDataWrapper.data.results;
@@ -160,10 +155,6 @@ namespace ComicBookApp
                         && creator.thumbnail.path != ""
                         && creator.thumbnail.path != ImageNotAvailablePath)
                     {
-                        creator.thumbnail.small = String.Format("{0}/standard_small.{1}",
-                            creator.thumbnail.path,
-                            creator.thumbnail.extension);
-
                         creator.thumbnail.large = String.Format("{0}/portrait_xlarge.{1}",
                             creator.thumbnail.path,
                             creator.thumbnail.extension);
@@ -190,7 +181,7 @@ namespace ComicBookApp
             var timeStamp = DateTime.Now.Ticks.ToString();
             var hash = MakeAHash(timeStamp);
 
-            string url = String.Format("http://gateway.marvel.com:80/v1/public/creators?limit=15&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
+            string url = String.Format("http://gateway.marvel.com:80/v1/public/creators?limit=20&offset={0}&apikey={1}&ts={2}&hash={3}", offset, PublicKey, timeStamp, hash);
 
             //call to API
             HttpClient http = new HttpClient();

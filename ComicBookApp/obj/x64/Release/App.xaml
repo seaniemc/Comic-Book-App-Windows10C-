@@ -1,0 +1,29 @@
+﻿<Application
+    x:Class="ComicBookApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ComicBookApp"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <Style TargetType="RelativePanel" x:Key="MyRelativePanel">
+            <Setter Property="Background" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MyTextBlock1">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+        <Style TargetType="Grid" x:Key="MyGrid">
+            <Setter Property="Background" Value="DarkOliveGreen"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MyTextBlock2">
+            <Setter Property="FontStyle" Value="Oblique"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+        </Style>
+         
+    </Application.Resources>
+</Application>
+

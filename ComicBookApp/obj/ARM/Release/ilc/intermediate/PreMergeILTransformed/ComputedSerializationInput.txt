@@ -1,0 +1,3 @@
+"/t:ComicBookApp.Models.CharacterDataWrapper,ComicBookApp,json"
+"/t:ComicBookApp.Models.ComicDataWrapper,ComicBookApp,json"
+"/t:ComicBookApp.Models.CreatorDataWrapper,ComicBookApp,json"

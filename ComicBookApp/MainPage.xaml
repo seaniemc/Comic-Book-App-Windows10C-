@@ -24,7 +24,7 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Collapsed" />
+                        <Setter Target="AutoSuggestBox.Visibility" Value="Collapsed" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="MidiemLayout">
@@ -32,7 +32,7 @@
                         <AdaptiveTrigger MinWindowWidth="600" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
-                        <Setter Target="MyAutoSuggestBox.Visibility" Value="Visible" />
+                        <Setter Target="AutoSuggestBox.Visibility" Value="Visible" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>

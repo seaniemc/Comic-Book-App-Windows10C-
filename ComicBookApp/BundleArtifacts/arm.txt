@@ -1,0 +1,6 @@
+MainPackage=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\ARM\Release\ComicBookApp_1.1.13.0_ARM.appx
+SymbolPackage=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\AppPackages\ComicBookApp_1.1.13.0_Test\ComicBookApp_1.1.13.0_ARM.appxsym
+ResourcePack=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\ARM\Release\ComicBookApp_1.1.13.0_scale-100.appx
+ResourcePack=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\ARM\Release\ComicBookApp_1.1.13.0_scale-125.appx
+ResourcePack=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\ARM\Release\ComicBookApp_1.1.13.0_scale-150.appx
+ResourcePack=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\ARM\Release\ComicBookApp_1.1.13.0_scale-400.appx

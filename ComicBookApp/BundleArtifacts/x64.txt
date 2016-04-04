@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\bin\x64\Release\ComicBookApp_1.1.13.0_x64.appx
+SymbolPackage=C:\Users\Sean\Documents\3rdYear\ComicBookApp\ComicBookApp\AppPackages\ComicBookApp_1.1.13.0_Test\ComicBookApp_1.1.13.0_x64.appxsym
