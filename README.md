@@ -1,6 +1,6 @@
 # Comic-Book-App-Windows10C-
 #Overview
-The ComicBookApp is an developed to access the Marvel Api and retieve data. The data is then displayed on a Xmal page so the user can 
+The ComicBookApp is an app developed to access the Marvel Api and retieve data. The data is then displayed on a Xmal page so the user can
 find out some intresting information about there favourate Marvel Characters. The information is sent back from the API in Json 
  Format and is then deserializered and placed into C# classes. The classes are stored in the Models folder and it contains the 
  classes CharacterDataWrapper, ComicDataWrapper, CreatorDataWrapper. The DataFacade class is where all the Magic happens. 
